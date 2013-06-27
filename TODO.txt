@@ -1,0 +1,16 @@
+
+BACKLOG
+
+- Faire une liste de brique et instancier le playfield pour voir si ça marche
+- Chercher un moyen de faire un unit test sur le panneau.
+- Ecrire la doc -_-.
+
+DOING 
+
+
+
+DONE
+
+- Chercher comment on écrit la doc
+- Faire le unit test de App.
+
