@@ -18,7 +18,7 @@ public final class App
     public static void main( String[] args )
     {
     	MainFenetre fen = new MainFenetre();
-    	fen.getFrame().show();
+    	fen.getFrame().setVisible(true);
 
     }
 }
