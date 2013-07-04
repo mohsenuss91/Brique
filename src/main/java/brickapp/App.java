@@ -1,6 +1,7 @@
 package brickapp;
 
 import brickapp.ihm.MainFenetre;
+
 /**
 * Classe principale de l'application casse brique. 
 * Lance l'interface graphique.
