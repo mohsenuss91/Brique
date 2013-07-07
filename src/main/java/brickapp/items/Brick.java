@@ -1,4 +1,4 @@
-package brickapp;
+package brickapp.items;
 import brickapp.utils.Position;
 
 /**
@@ -13,7 +13,7 @@ public class Brick{
 	/**
 	* Hauteur de la brique
 	*/
-    public static final int HEIGHT = 10;
+    public static final int HEIGHT = 15;
 	/**
 	* Largeur de la brique
 	*/

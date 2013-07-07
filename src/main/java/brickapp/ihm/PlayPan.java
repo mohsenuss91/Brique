@@ -10,8 +10,8 @@ package brickapp.ihm;
 import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.util.List;
-import brickapp.utils.Position;
-import brickapp.Brick;
+
+import brickapp.items.Brick;
 
 public class PlayPan extends JPanel {
 	private List<Brick> brickList;
@@ -21,7 +21,7 @@ public class PlayPan extends JPanel {
 	*/
 	private void paintBrick(Graphics g){
 		for (Brick b : this.brickList){
-			g.fillRect(b.getPosition().getx(),b.getPosition().gety(),b.getPosition().getx()+Brick.HEIGHT,b.getPosition().gety()+Brick.WIDTH);
+			g.fillRect(b.getPosition().getx(),b.getPosition().gety(),Brick.WIDTH,Brick.HEIGHT);
 		}
 	}
 

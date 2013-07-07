@@ -6,6 +6,8 @@
 
 package brickapp.ihm;
 
+import brickapp.utils.InitPlayField;
+
 import javax.swing.JFrame;
 
 
@@ -35,7 +37,7 @@ public class MainFenetre{
 	public MainFenetre(){
 		frame = new JFrame(TITRE);
 		frame.setSize(WIDTH,HEIGHT);
-		//frame.setContentPane(new PlayPan());
+		frame.setContentPane(new PlayPan(InitPlayField.getInitBrickList()));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 

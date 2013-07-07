@@ -1,5 +1,6 @@
 package brickapp;
 
+import brickapp.items.Brick;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
@@ -19,7 +20,7 @@ public class BrickTest{
         Brick br = new Brick(p);
         Position p2 = br.getPosition();
         assertThat(p2, is(p));
-        assertThat(Brick.HEIGHT, is(10));
+        assertThat(Brick.HEIGHT, is(15));
         assertThat(Brick.WIDTH, is(40));
     }
 
