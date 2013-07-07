@@ -11,10 +11,12 @@ import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.util.List;
 
+import brickapp.items.Ball;
 import brickapp.items.Brick;
 
 public class PlayPan extends JPanel {
 	private List<Brick> brickList;
+    private Ball ball;
 
 	/**
 	* Methode privée qui dessine les briques
@@ -23,6 +25,7 @@ public class PlayPan extends JPanel {
 		for (Brick b : this.brickList){
 			g.fillRect(b.getPosition().getx(),b.getPosition().gety(),Brick.WIDTH,Brick.HEIGHT);
 		}
+        g.fillOval(ball.getPosition().getx(),ball.getPosition().gety(),ball.getRayon(),ball.getRayon());
 	}
 
 
@@ -30,8 +33,9 @@ public class PlayPan extends JPanel {
 	* Instancie le playground
 	* @param bl liste des briques du niveau
 	*/
-	public PlayPan(List<Brick> bl){
+	public PlayPan(List<Brick> bl,Ball b){
 		brickList = bl;
+        ball=b;
 	}
 
 	/**

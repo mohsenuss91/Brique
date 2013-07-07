@@ -37,7 +37,7 @@ public class MainFenetre{
 	public MainFenetre(){
 		frame = new JFrame(TITRE);
 		frame.setSize(WIDTH,HEIGHT);
-		frame.setContentPane(new PlayPan(InitPlayField.getInitBrickList()));
+		frame.setContentPane(new PlayPan(InitPlayField.getInitBrickList(),InitPlayField.getInitBall()));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 

@@ -8,11 +8,19 @@ package brickapp.utils;
 
 
 
+import brickapp.items.Ball;
 import brickapp.items.Brick;
 import java.util.ArrayList;
 import java.util.List;
 
 public final  class InitPlayField {
+
+    static final int NBRIQUES=5;
+    static final int POS=50;
+    static final int BPOS=250;
+    static final int RAYON=25;
+
+
 
     private InitPlayField(){
 
@@ -20,11 +28,14 @@ public final  class InitPlayField {
 
     public static  List<Brick> getInitBrickList(){
            List<Brick> lb = new ArrayList<Brick>();
-        for (int i=0;i<5;i++) {
-             lb.add(new Brick(new Position(i*50,i*50)));
+        for (int i=0;i<NBRIQUES;i++) {
+             lb.add(new Brick(new Position(i*POS,i*POS)));
         }
-
         return lb;
+    }
+
+    public static Ball getInitBall(){
+        return new Ball(new Position(BPOS,BPOS),RAYON);
     }
 
 }
