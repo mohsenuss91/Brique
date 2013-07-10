@@ -68,7 +68,6 @@ public class PlayPan extends JPanel implements MouseMotionListener {
     }
 
     public void mouseMoved(MouseEvent mouseEvent) {
-        System.out.println(mouseEvent.getX());
         this.bar.setBarPosition(mouseEvent.getX());
         this.repaint();
 
