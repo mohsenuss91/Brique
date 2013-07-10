@@ -9,6 +9,7 @@ package brickapp.utils;
 
 
 import brickapp.items.Ball;
+import brickapp.items.Bar;
 import brickapp.items.Brick;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,8 @@ public final  class InitPlayField {
     static final int POS=50;
     static final int BPOS=250;
     static final int RAYON=25;
-
+    static final int BARPOSX=200;
+    static final int BARPOSY=550;
 
 
     private InitPlayField(){
@@ -36,6 +38,11 @@ public final  class InitPlayField {
 
     public static Ball getInitBall(){
         return new Ball(new Position(BPOS,BPOS),RAYON);
+    }
+
+    public static Bar getInitBar(){
+
+        return new Bar(new Position(BARPOSX,BARPOSY));
     }
 
 }
