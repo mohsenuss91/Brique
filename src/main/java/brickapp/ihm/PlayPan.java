@@ -27,11 +27,13 @@ public class PlayPan extends JPanel implements MouseMotionListener {
 	private void paintBrick(Graphics g){
         g.setColor(Color.white);
         g.fillRect(0,0,400,600);
-        g.setColor(Color.black);
 		for (Brick b : this.brickList){
-			g.fillRect(b.getPosition().getx(),b.getPosition().gety(),Brick.WIDTH,Brick.HEIGHT);
+            g.setColor(Color.red);
+            g.fillRect(b.getPosition().getx(),b.getPosition().gety(),Brick.WIDTH,Brick.HEIGHT);
 		}
+        g.setColor(Color.blue);
         g.fillOval(ball.getPosition().getx(), ball.getPosition().gety(), ball.getRayon(), ball.getRayon());
+        g.setColor(Color.black);
         g.fillRoundRect(bar.getPosition().getx(),bar.getPosition().gety(),Brick.WIDTH,Brick.HEIGHT/2,10, 10);
 	}
 
