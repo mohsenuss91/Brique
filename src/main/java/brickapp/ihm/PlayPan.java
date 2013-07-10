@@ -8,7 +8,7 @@
 package brickapp.ihm;
 
 import javax.swing.JPanel;
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 import java.util.List;
@@ -25,6 +25,9 @@ public class PlayPan extends JPanel implements MouseMotionListener {
 	* Methode privée qui dessine les briques
 	*/
 	private void paintBrick(Graphics g){
+        g.setColor(Color.white);
+        g.fillRect(0,0,400,600);
+        g.setColor(Color.black);
 		for (Brick b : this.brickList){
 			g.fillRect(b.getPosition().getx(),b.getPosition().gety(),Brick.WIDTH,Brick.HEIGHT);
 		}
@@ -48,6 +51,7 @@ public class PlayPan extends JPanel implements MouseMotionListener {
 	* Dessine le playground (appelé à chaque événement sur l'ihm)
 	*/
 	public void paintComponent(Graphics g){
+
 		paintField(g);
 	}
 
