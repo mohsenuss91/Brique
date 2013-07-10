@@ -43,6 +43,13 @@ public class Position{
 		return y;
 	}
 
+
+    public void setX(int x){
+        if(x>=0){
+            this.x=x;
+        }
+        else throw new IllegalArgumentException();
+    }
 	public void setPosition(int x, int y){
 		if ((x>=0) && (y>=0)){
 			this.x=x;

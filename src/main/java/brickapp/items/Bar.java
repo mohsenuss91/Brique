@@ -13,4 +13,10 @@ public class Bar {
     public Position getPosition() {
         return position;
     }
+    public void setBarPosition(int x){
+        if (x>0){
+            this.position.setX(x);
+        }
+    }
+
 }

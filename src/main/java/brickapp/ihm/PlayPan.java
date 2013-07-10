@@ -9,13 +9,15 @@ package brickapp.ihm;
 
 import javax.swing.JPanel;
 import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 import java.util.List;
 
 import brickapp.items.Ball;
 import brickapp.items.Bar;
 import brickapp.items.Brick;
 
-public class PlayPan extends JPanel {
+public class PlayPan extends JPanel implements MouseMotionListener {
 	private List<Brick> brickList;
     private Ball ball;
     private Bar bar;
@@ -39,6 +41,7 @@ public class PlayPan extends JPanel {
 		brickList = bl;
         ball=b;
         this.bar=bar;
+        addMouseMotionListener(this);
 	}
 
 	/**
@@ -55,4 +58,16 @@ public class PlayPan extends JPanel {
 	public void paintField(Graphics g){
 		paintBrick(g);
 	}
+
+    public void mouseDragged(MouseEvent mouseEvent) {
+
+    }
+
+    public void mouseMoved(MouseEvent mouseEvent) {
+        System.out.println(mouseEvent.getX());
+        this.bar.setBarPosition(mouseEvent.getX());
+        this.repaint();
+
+
+    }
 }
