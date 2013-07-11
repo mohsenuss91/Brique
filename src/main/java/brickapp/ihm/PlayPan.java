@@ -7,8 +7,10 @@
 
 package brickapp.ihm;
 
-import javax.swing.JPanel;
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 import java.util.List;
@@ -21,6 +23,14 @@ public class PlayPan extends JPanel implements MouseMotionListener {
 	private List<Brick> brickList;
     private Ball ball;
     private Bar bar;
+    private Timer moveBall = new Timer(25,new ActionListener() {
+        public void actionPerformed(ActionEvent actionEvent) {
+           // moveBall();
+            repaint();
+        }
+    });
+
+
 	/**
 	* Methode privée qui dessine les briques
 	*/
@@ -47,6 +57,7 @@ public class PlayPan extends JPanel implements MouseMotionListener {
         ball=b;
         this.bar=bar;
         addMouseMotionListener(this);
+        moveBall.start();
 	}
 
 	/**
@@ -71,7 +82,7 @@ public class PlayPan extends JPanel implements MouseMotionListener {
 
     public void mouseMoved(MouseEvent mouseEvent) {
         this.bar.setBarPosition(mouseEvent.getX());
-        this.repaint();
+       // this.repaint();
 
 
     }

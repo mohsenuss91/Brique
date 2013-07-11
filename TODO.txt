@@ -1,25 +1,32 @@
 
 BACKLOG
-- Ecrire la physique de la balle
-        - Faire le rebond de la balle sur le batonet/Brique
-        - Detection du heurt d'un objet
 
+- Corriger le probleme de position de la barre
 - Chercher un moyen de faire un unit test sur le panneau.
--Tester la classe InitPlayField
+
 - Ecrire la doc -_-.
 
 DOING  (2)
 
-   - Créer le batonnet qui ratrappe la balle
+       - Animer la balle  (Timer mis en place)
+       -  Ecrire la physique de la balle
+                - Faire le rebond de la balle sur le batonet/Brique
+                - Detection du heurt d'un objet
 
-   - Tester la balle
 
 
 DONE
+
+
+- Animer la bare (régler le probleme du redessinage de la fenetre)
+
+- Créer le batonnet qui ratrappe la balle
 
 - Chercher comment on écrit la doc
 - Faire le unit test de App.
 - Faire une liste de brique et instancier le playfield pour voir si ça marche (corriger pour que ça soit joli)
 - Créer la balle
+   - Tester la balle
+
 
 
