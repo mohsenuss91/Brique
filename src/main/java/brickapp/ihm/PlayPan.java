@@ -18,6 +18,7 @@ import java.util.List;
 import brickapp.items.Ball;
 import brickapp.items.Bar;
 import brickapp.items.Brick;
+import brickapp.utils.Position;
 
 public class PlayPan extends JPanel implements MouseMotionListener {
 	private List<Brick> brickList;
@@ -25,7 +26,7 @@ public class PlayPan extends JPanel implements MouseMotionListener {
     private Bar bar;
     private Timer moveBall = new Timer(25,new ActionListener() {
         public void actionPerformed(ActionEvent actionEvent) {
-           // moveBall();
+            displaceBall();
             repaint();
         }
     });
@@ -82,8 +83,30 @@ public class PlayPan extends JPanel implements MouseMotionListener {
 
     public void mouseMoved(MouseEvent mouseEvent) {
         this.bar.setBarPosition(mouseEvent.getX());
-       // this.repaint();
+    }
 
+    protected void displaceBall(){
+
+        int vx = ball.getVitX();
+        int vy = ball.getVitY();
+        Position p = ball.getPosition();
+        p.setX(p.getx()+vx);
+        p.setY(p.gety()+vy);
+        ball.setPos(p);
+        detectCol();
+    }
+    protected void detectCol(){
+        Position pos=ball.getPosition();
+        if (pos.getx()<=0){
+            ball.invertVitX();
+        }else{
+            if(pos.getx() >= (MainFenetre.WIDTH+ball.getRayon())){
+                ball.invertVitX();
+            }
+        }
+        if (pos.gety()<=0){
+            ball.invertVitY();
+        }
 
     }
 }

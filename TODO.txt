@@ -7,10 +7,9 @@ BACKLOG
 - Ecrire la doc -_-.
 
 DOING  (2)
-
-       - Animer la balle  (Timer mis en place)
+       - ecrire des tests
        -  Ecrire la physique de la balle
-                - Faire le rebond de la balle sur le batonet/Brique
+                - Faire le rebond de la balle sur le batonet/Brique (fait mur à peu près)
                 - Detection du heurt d'un objet
 
 
@@ -26,7 +25,9 @@ DONE
 - Faire le unit test de App.
 - Faire une liste de brique et instancier le playfield pour voir si ça marche (corriger pour que ça soit joli)
 - Créer la balle
-   - Tester la balle
+- Tester la balle
+- Animer la balle  (Timer mis en place)
+
 
 
 
