@@ -100,7 +100,7 @@ public class PlayPan extends JPanel implements MouseMotionListener {
         if (pos.getx()<=0){
             ball.invertVitX();
         }else{
-            if(pos.getx() >= (MainFenetre.WIDTH+ball.getRayon())){
+            if(pos.getx() >= (MainFenetre.WIDTH-ball.getRayon())){
                 ball.invertVitX();
             }
         }
