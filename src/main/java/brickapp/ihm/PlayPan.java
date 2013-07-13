@@ -97,6 +97,8 @@ public class PlayPan extends JPanel implements MouseMotionListener {
     }
     protected void detectCol(){
         Position pos=ball.getPosition();
+
+        //Testing colision with wall
         if (pos.getx()<=0){
             ball.invertVitX();
         }else{
@@ -107,6 +109,25 @@ public class PlayPan extends JPanel implements MouseMotionListener {
         if (pos.gety()<=0){
             ball.invertVitY();
         }
+
+        findCollisionWithBar();
+
+    }
+
+    protected void findCollisionWithBar(){
+        int posx = ball.getPosition().getx();
+        int posy = ball.getPosition().gety();
+        int diameter = ball.getRayon();
+
+        if (posy+diameter >= bar.getPosition().gety()){
+            //The ball may fall ^^ trying to save it.
+
+            if (posx >=bar.getPosition().getx() && posx<=bar.getPosition().getx() + Brick.WIDTH){
+                ball.invertVitY();
+
+            }
+        }
+
 
     }
 }
