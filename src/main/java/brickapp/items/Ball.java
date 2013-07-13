@@ -4,7 +4,7 @@ package brickapp.items;
 import brickapp.utils.Position;
 
 public class Ball {
-    final static int VITESSE=-2;
+    public static final int VITESSE=-2;
 
 
 

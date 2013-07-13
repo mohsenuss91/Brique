@@ -16,4 +16,15 @@ public class BallTest {
            assertThat(b.getPosition().gety(),is(10));
        }
 
+        @Test
+        public void TestRebound(){
+            Ball b =  new Ball(new Position(10,10),5);
+            assertThat(b.getVitX(),is(b.VITESSE));
+            assertThat(b.getVitY(),is(b.VITESSE));
+            b.invertVitX();
+            b.invertVitY();
+            assertThat(b.getVitX(),is(-(b.VITESSE)));
+            assertThat(b.getVitY(),is(-(b.VITESSE)));
+        }
+
 }

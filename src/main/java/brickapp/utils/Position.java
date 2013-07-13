@@ -51,7 +51,7 @@ public class Position{
         if(x>=0){
             this.x=x;
         }
-        else throw new IllegalArgumentException();
+        else {throw new IllegalArgumentException();}
     }
 
     public void setY(int y){
@@ -61,7 +61,7 @@ public class Position{
         if(y>=0){
             this.y=y;
         }
-        else throw new IllegalArgumentException();
+        else {throw new IllegalArgumentException();}
     }
 	public void setPosition(int x, int y){
 		if ((x>=0) && (y>=0)){
