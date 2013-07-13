@@ -9,8 +9,8 @@ BACKLOG
 DOING  (2)
        - ecrire des tests
        -  Ecrire la physique de la balle
-                - Faire le rebond de la balle sur le batonet/Brique (fait mur à peu près)
-                - Detection du heurt d'un objet
+                - Faire le rebond de la balle sur le batonet/Brique (reste à debug le rebond sur le batonet et rendre la balle dirigeable)
+                - Detection du heurt d'un objet (reste brique)
 
 
 
