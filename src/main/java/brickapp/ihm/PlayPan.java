@@ -30,9 +30,11 @@ public class PlayPan extends JPanel implements MouseMotionListener {
             repaint();
         }
     });
+    private boolean isInBar=false;
 
 
-	/**
+
+    /**
 	* Methode privée qui dessine les briques
 	*/
 	private void paintBrick(Graphics g){
@@ -119,15 +121,21 @@ public class PlayPan extends JPanel implements MouseMotionListener {
         int posy = ball.getPosition().gety();
         int diameter = ball.getRayon();
 
-        if (posy+diameter >= bar.getPosition().gety()){
-            //The ball may fall ^^ trying to save it.
 
-            if (posx >=bar.getPosition().getx() && posx<=bar.getPosition().getx() + Brick.WIDTH){
-                ball.invertVitY();
+        if (!this.isInBar){
+            if (posy+diameter >= bar.getPosition().gety()){
+                //The ball may fall ^^ trying to save it.
 
+                if (posx >=bar.getPosition().getx() && posx<=bar.getPosition().getx() + Brick.WIDTH){
+                    ball.invertVitY();
+                    this.isInBar=true;
+                }
             }
         }
 
+        if (!(posx >=bar.getPosition().getx() && posx<=bar.getPosition().getx() + Brick.WIDTH))      {
+            this.isInBar=false;
+        }
 
     }
 }
