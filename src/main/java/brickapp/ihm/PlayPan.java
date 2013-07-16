@@ -119,8 +119,10 @@ public class PlayPan extends JPanel implements MouseMotionListener {
 
     private void findCollisionWithBrick() {
         for(Brick b : this.brickList ){
-                 if(this.ball.getPosition().getx()>=b.getPosition().getx()+Brick.HEIGHT){
-                     if(this.ball.getPosition().getx()<=b.getPosition().getx()){
+            if((this.ball.getPosition().getx()>=b.getPosition().getx()) && (this.ball.getPosition().getx()<= b.getPosition().getx()+Brick.WIDTH) )
+            if(this.ball.getPosition().gety()<=b.getPosition().gety()+Brick.HEIGHT){
+
+                     if(this.ball.getPosition().gety()>=b.getPosition().gety()){
                          ball.invertVitY();
                      }
                  }
