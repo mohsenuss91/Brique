@@ -47,7 +47,7 @@ public class PlayPan extends JPanel implements MouseMotionListener {
         g.setColor(Color.blue);
         g.fillOval(ball.getPosition().getx(), ball.getPosition().gety(), ball.getRayon(), ball.getRayon());
         g.setColor(Color.black);
-        g.fillRoundRect(bar.getPosition().getx(),bar.getPosition().gety(),Brick.WIDTH,Brick.HEIGHT/2,10, 10);
+        g.fillRoundRect(bar.getPosition().getx(), bar.getPosition().gety(), Brick.WIDTH, Brick.HEIGHT / 2, 10, 10);
 	}
 
 
@@ -113,7 +113,18 @@ public class PlayPan extends JPanel implements MouseMotionListener {
         }
 
         findCollisionWithBar();
+        findCollisionWithBrick();
 
+    }
+
+    private void findCollisionWithBrick() {
+        for(Brick b : this.brickList ){
+                 if(this.ball.getPosition().getx()>=b.getPosition().getx()+Brick.HEIGHT){
+                     if(this.ball.getPosition().getx()<=b.getPosition().getx()){
+                         ball.invertVitY();
+                     }
+                 }
+        }
     }
 
     protected void findCollisionWithBar(){
